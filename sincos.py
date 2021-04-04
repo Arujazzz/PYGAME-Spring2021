@@ -74,17 +74,16 @@ while draw:
        pygame.draw.line(screen, black, (975, y), (990, y))
 
     #график синуса и косинуса
-    point_sin = []
-    point_cos = []
+    coscoor, sincoor = [], []
     for x in range(60, 960 + 1):
         xrad = (((x - 510) * math.pi) / 150)
-        ysin = (math.sin(xrad) * -240) + 300
-        ycos = (math.cos(xrad) * -240) + 300
-        point_sin.append((x, ysin))
-        point_cos.append((x, ycos))
-    pygame.draw.aalines(screen, red, False, point_sin)
-    for point in range(0, len(point_cos) - 1, 2):
-        pygame.draw.aaline(screen, blue, point_cos[point], point_cos[point + 1])
+        cosy = (math.cos(xrad) * -240) + 300
+        siny = (math.sin(xrad) * -240) + 300
+        coscoor.append((x, cosy))
+        sincoor.append((x, siny))
+    pygame.draw.aalines(screen, red, False, sincoor)
+    for point in range(0, len(coscoor) - 1, 2):
+        pygame.draw.aaline(screen, blue, coscoor[point], coscoor[point + 1])
 
     font = pygame.font.Font(None, 30)
     textsin1 = font.render("-", True, red)
