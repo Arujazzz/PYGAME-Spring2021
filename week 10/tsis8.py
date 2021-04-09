@@ -1,6 +1,5 @@
 import pygame
 import random
-import time
 pygame.init()
 backimage = pygame.image.load("background.png")
 playerimage = pygame.image.load("Player.png")
@@ -121,4 +120,3 @@ while game:
     show_score(320, 50)
     clock.tick(60)
     pygame.display.update()
-
