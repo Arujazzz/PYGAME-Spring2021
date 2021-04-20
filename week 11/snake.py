@@ -172,9 +172,9 @@ while game:
             if event.key == pygame.K_s and snake2.dy != -d:
                 snake2.dx = 0
                 snake2.dy = d
-            if event.key == pygame.K_f:
-                pause()
             if event.key == pygame.K_SPACE:
+                pause()
+            if event.key == pygame.K_ESCAPE:
                 with open("saved_snakes.data", 'wb') as f:
                     pickle.dump(snakes, f)
                 with open("saved_snakes.data", 'rb') as f:
