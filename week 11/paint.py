@@ -76,8 +76,10 @@ while True:
     if draw == True and mouse_pos[0] > 120:
         if shape == 0:
             pygame.draw.circle(screen, brush_color, mouse_pos, brush_size)
+    if draw == True and mouse_pos[0] > 110:
         if shape == 1:
             pygame.draw.rect(screen, brush_color, [mouse_pos[0], mouse_pos[1], 100, 100], 2)
+    if draw == True and mouse_pos[0] > 154:
         if shape == 2:
             pygame.draw.circle(screen, brush_color, mouse_pos, 50, 2)
 
